@@ -1,8 +1,8 @@
+import Notes from "./Notes";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MockTests from "./MockTests"; // path must match where you saved the file
 import React, { useState, useEffect } from 'react';
-import { initializeApp } from 'firebase/app';
-import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from 'firebase/auth';
-import { getFirestore, doc, setDoc, collection, onSnapshot, query, updateDoc, arrayUnion, arrayRemove, deleteDoc, getDocs } from 'firebase/firestore';
-import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { db } from "./firebase";
 import { ChevronDown, ChevronRight, X, FileText, File, BookOpen, Layers, ListTodo, Sun, Moon } from 'lucide-react'; // Added Sun and Moon icons
 
 // Define global variables for Firebase configuration (provided by the environment)
