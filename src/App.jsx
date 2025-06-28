@@ -1,4 +1,6 @@
 import Notes from "./Notes";
+import Upload from "./Upload";
+import Notes from "./Notes";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MockTests from "./MockTests"; // path must match where you saved the file
 import React, { useState, useEffect } from 'react';
@@ -1982,6 +1984,12 @@ function App() {
                         </div>
                     </div>
                 );
+case 'notes':
+  return <Notes />;
+
+case 'upload':
+  return <Upload />;
+
             case 'study-plan':
                 // Display list of study plans
                 if (!selectedPlan) {
